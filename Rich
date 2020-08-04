@@ -1,0 +1,34 @@
+import 'package:flutter/material.dart';
+
+void main() => runApp(MyApp());
+
+ class MyApp extends StatefulWidget {
+   @override
+   _MyAppState createState() => _MyAppState();
+ }
+
+ class _MyAppState extends State<MyApp> {
+   @override
+   Widget build(BuildContext context) {
+     return MaterialApp(
+           home: Scaffold(
+             appBar: AppBar(
+               title: Center(
+                 child: Text(
+                   'Rich',
+                   style: TextStyle(color: Colors.black, fontSize: 45, fontStyle: FontStyle.italic),
+                 ),
+               ),
+               backgroundColor: Colors.white,
+             ),
+             body: SafeArea(child : Center(
+               child: Image(
+                 image: NetworkImage('https://indiaforensic.com/certifications/wp-content/uploads/2015/12/diamond.png'),
+               ),
+             )),
+             backgroundColor: Colors.black,
+           ),
+         );
+   }
+ }
+
